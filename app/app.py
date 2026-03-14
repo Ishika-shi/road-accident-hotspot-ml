@@ -100,7 +100,7 @@ if page == "Accident Heatmap":
     st.subheader("UK Road Accident Heatmap")
 
     # Use a subset for faster rendering
-    map_data = data[["Latitude", "Longitude"]].dropna().sample(5000)
+    map_data = data[["Latitude", "Longitude"]].dropna().sample(1000)
 
     # Create map centered roughly in UK
     m = folium.Map(location=[54.5, -3], zoom_start=6)
