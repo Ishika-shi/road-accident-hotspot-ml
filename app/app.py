@@ -50,7 +50,7 @@ filtered_data = data[
 # Load trained model
 @st.cache_resource
 def load_model():
-    return pickle.load(open("app\\accident_severity_model.pkl", "rb"))
+    return pickle.load(open("app/accident_severity_model.pkl", "rb"))
 
 model = load_model()
 
