@@ -85,8 +85,7 @@ if page == "Dashboard Overview":
 
     st.subheader("Accident Hotspot Map")
 
-    map_data = filtered_data[["Latitude","Longitude"]].dropna().sample(1000)
-
+    map_data = filtered_data[["Latitude","Longitude"]].dropna()
      # rename columns for streamlit
     map_data = map_data.rename(columns={
        "Latitude": "latitude",
