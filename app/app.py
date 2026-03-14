@@ -27,7 +27,7 @@ This dashboard analyzes UK road accident data and predicts accident severity usi
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/raw/accidents.csv")
+    return pd.read_csv("notebook//app//sample_data//accidents_sample.csv")
 
 data = load_data()
 
@@ -50,7 +50,7 @@ filtered_data = data[
 # Load trained model
 @st.cache_resource
 def load_model():
-    return pickle.load(open("app/accident_severity_model.pkl", "rb"))
+    return pickle.load(open("app/sample_data/accident_severity_model.pkl", "rb"))
 
 model = load_model()
 
